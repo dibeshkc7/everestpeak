@@ -7,12 +7,14 @@ import TargetAudience from "@/component/targetaudience";
 import Image from "next/image";
 import Slider from "@/component/slider";
 import BackgroundVideo from "@/component/backgroundvideo";
+import TrustedBy from "@/component/trustedBy";
 
 export default function Home() {
   return (
     <div>
       <Introduction />
       <BackgroundVideo />
+      <TrustedBy />
       <Purpose />
       <Slider />
       <HighAltitudeAdvantages />
