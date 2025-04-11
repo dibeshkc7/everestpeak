@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { cn } from "@/lib/utils"; // Utility function for conditional class names (ShadCN)
 
 const logos = [
   "/images/contentstack.png",
@@ -12,46 +11,47 @@ const logos = [
   "/images/snap.png",
   "/images/orum.png",
   "/images/mongodb.png",
-  "/images/figma.png",
+  "/images/figma1.png",
   "/images/openai.png",
 ];
 
 const TrustedBy = () => {
   return (
-    <div className="bg-black py-10">
-      <h2 className="text-center text-white text-xl font-semibold mb-6">
+    <div className="bg-white py-10">
+      <h2 className="text-center text-black text-l font-semibold mb-6">
         TRUSTED BY
       </h2>
-      <div className="overflow-hidden whitespace-nowrap relative w-full">
-        <div className="flex space-x-12 animate-marquee">
-          {/* Render logos twice for seamless scrolling */}
-          {logos.concat(logos).map((logo, index) => (
+      <div className="overflow-hidden relative w-full">
+        <div className="marquee-track flex w-max space-x-10">
+          {/* Logos duplicated for smooth scroll */}
+          {[...logos, ...logos].map((logo, index) => (
             <Image
               key={index}
               src={logo}
-              alt="Company Logo"
-              width={100} // Adjust based on your design
-              height={40}
-              className="h-10 w-auto"
+              alt={`Logo ${index}`}
+              width={80}
+              height={32}
+              className="h-8 w-auto object-contain"
             />
           ))}
         </div>
       </div>
 
-      {/* Tailwind Animations */}
-      <style>
-        {`
-          @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
+      {/* Marquee animation styling */}
+      <style jsx>{`
+        .marquee-track {
+          animation: scroll-left 60s linear infinite;
+        }
 
-          .animate-marquee {
-            display: flex;
-            animation: marquee 20s linear infinite;
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
           }
-        `}
-      </style>
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 };
