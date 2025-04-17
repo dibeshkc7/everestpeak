@@ -23,7 +23,6 @@ const TrustedBy = () => {
       </h2>
       <div className="overflow-hidden relative w-full">
         <div className="marquee-track flex w-max space-x-10">
-          {/* Logos duplicated for smooth scroll */}
           {[...logos, ...logos].map((logo, index) => (
             <Image
               key={index}
