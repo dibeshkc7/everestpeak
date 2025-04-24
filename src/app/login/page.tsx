@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { FcGoogle } from "react-icons/fc";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function LoginPage() {
@@ -23,7 +22,11 @@ export default function LoginPage() {
             variant="outline"
             className="w-full flex items-center gap-2 justify-center text-base"
           >
-            <FcGoogle className="w-5 h-5" />
+            <img
+              src="/images/google-logo.png"
+              alt="Google Logo"
+              className="w-5 h-5 object-contain"
+            />
             Sign in with Google
           </Button>
 
@@ -61,7 +64,7 @@ export default function LoginPage() {
           {/* Forgot password link */}
           <a
             href="#"
-            className="text-center text-[18px] text-blue-600 hover:underline"
+            className="text-center text-[18px] text-blue-700 hover:underline"
           >
             Forgot password?
           </a>
@@ -69,11 +72,11 @@ export default function LoginPage() {
           {/* reCAPTCHA disclaimer */}
           <p className="text-[13px] text-center text-black-500 mt-2 leading-tight">
             This site is protected by reCAPTCHA and the{" "}
-            <a href="#" className="underline text-blue-600">
+            <a href="#" className="underline text-blue-900">
               Google Privacy Policy
             </a>{" "}
             and{" "}
-            <a href="#" className="underline text-blue-600">
+            <a href="#" className="underline text-blue-900">
               Terms of Service
             </a>{" "}
             apply.
