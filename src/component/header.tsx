@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-black text-white py-6 px-10 flex items-center justify-between shadow-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black text-white py-6 px-10 flex items-center justify-between shadow-md">
       <div className="flex items-center space-x-3">
         <img src="/epic4.png" alt="EPIC Logo" className="w-10 h-10" />
         <span className="text-2xl font-semibold ml-2">EPIC™</span>

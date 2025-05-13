@@ -11,7 +11,7 @@ import TrustedBy from "@/component/trustedBy";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pt-20">
       <Introduction />
       <BackgroundVideo />
       <TrustedBy />
