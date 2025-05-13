@@ -85,6 +85,7 @@ export default function GetStarted() {
 
   return (
     <div
+      id="get-started"
       className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
       style={{ backgroundImage: "url('/images/get-started-background.jpg')" }}
     >
